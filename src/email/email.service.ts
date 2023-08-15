@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { createTransport, Transport } from 'nodemailer';
-import { from } from 'rxjs';
 
 @Injectable()
 export class EmailService {
