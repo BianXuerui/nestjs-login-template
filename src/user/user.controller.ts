@@ -50,6 +50,12 @@ export class UserController {
     return await this.userService.register(registerUser);
   }
 
+  @Get('init-data')
+  async initData() {
+    await this.userService.initData();
+    return 'done';
+  }
+
   @Post('login')
   async userLogin(@Body() loginUser: LoginUserDto) {
     const vo = await this.userService.login(loginUser);
